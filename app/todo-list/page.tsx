@@ -1,20 +1,26 @@
-import React from 'react'
+'use client'
 import Link from '@/node_modules/next/link'
 import styles from '../page.module.css'
-import Form from '../components/Form'
+import AddTodo from '../AddTodo'
+import React, { useState } from 'react'
+import TodoList from '../todoList'
 
 
-const toDo = () => {
+const toDo: React.FC = () => {
+  const [todos, setTodos] = useState<string[]>([])
+
+  const addTodo = (text: string) => {
+    setTodos([...todos, text])
+  };
 
   return (
     <div className={styles.containerDiv}>
       <h1 className={styles.todoH1}>Todo list</h1>
-    <ul>
-    <Form/>
-    </ul>
-    <div className={styles.linkDiv}>
-      <Link className={styles.backLink} href="/">Tillbaka</Link>
-    </div>
+      <AddTodo onAdd={addTodo} />
+        <TodoList todos={todos} />
+      <div>
+        <Link className={styles.backLink} href="/">Tillbaka</Link>
+      </div>
     </div>
   )
 }
