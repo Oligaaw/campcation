@@ -17,8 +17,8 @@
 
 .div {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  /* flex-direction: column;  */
 }
 
 .todoLink {
@@ -84,4 +84,13 @@
 .p {
   font-family: 'Chewy';
   font-size: 20px;
+}
+
+.ul {
+  list-style: none;
+  align-self: center;
+}
+
+.li{
+  font-family: 'Roboto';
 }

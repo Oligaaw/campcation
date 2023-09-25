@@ -7,12 +7,12 @@ interface TodoProps {
 
 const Todo: React.FC<TodoProps> = ({ text }) => {
   return (
-    <>
-    <p className={styles.p}>Saker att göra:</p>
-    <li>
-      <p>{text}</p>
-    </li>
-    </>
+
+      <li className={styles.li}>
+        <span>{text}</span>
+      </li>
+    
+
   );
 };
 

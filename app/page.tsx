@@ -2,13 +2,14 @@ import Image from '@/node_modules/next/image'
 import styles from './page.module.css'
 import Link from '@/node_modules/next/link'
 import pic from '../public/IMG_20191110_035612_912.jpg'
+
 export default function Home() {
   return (
     <>
     <h1 className={styles.h1}>Olivia Gawelek</h1>
     <div className={styles.div}>
       <Image className={styles.image} priority={true} alt='image' src={pic}></Image>
-      <ul>
+      <ul className={styles.ul}>
         <li>
         <Link className={styles.todoLink} href="/todo-list">Att göra-lista</Link>
         </li>
