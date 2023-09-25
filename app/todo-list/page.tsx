@@ -1,29 +1,36 @@
 'use client'
-import Link from '@/node_modules/next/link'
+import Link from 'next/link'
 import styles from '../page.module.css'
 import AddTodo from '../todo-list/AddTodo'
 import React, { useState } from 'react'
 import TodoList from './TodoList'
 
 
-const ToDo: React.FC = () => {
+const Home: React.FC = () => {
   const [todos, setTodos] = useState<string[]>([]);
 
   const addTodo = (text: string) => {
     setTodos([...todos, text])
   };
 
+  const deleteTodo = (index: number) => {
+    const newTodos = todos.filter((_, i) => i !== index);
+    setTodos(newTodos);
+  }
+
   return (
-    <div className={styles.containerDiv}>
+    <div>
       <h1 className={styles.todoH1}>Todo list</h1>
       <AddTodo onAdd={addTodo} />
+      <div className={styles.todolist}>
       <p className={styles.p}>Saker att göra:</p>
-      <TodoList todos={todos} />
-      <div>
+      <TodoList todos={todos} onDelete={deleteTodo} />
+      </div>
+      <div className={styles.div}>
         <Link className={styles.backLink} href="/">Tillbaka</Link>
       </div>
     </div>
   );
 };
 
-export default ToDo
+export default Home

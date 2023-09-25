@@ -17,7 +17,7 @@ const AddTodo: React.FC<AddTodoProps> = ( {onAdd} ) => {
   };
 
   return (
-    <div>
+    <div className={styles.toDoDiv}>
       <input 
         className={styles.inputField} 
         type="text"

@@ -8,6 +8,13 @@
   margin: 30px;
 }
 
+.firstPageUl {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .h1 {
   text-align: center;
   font-size: 50px;
@@ -18,7 +25,6 @@
 .div {
   display: flex;
   justify-content: center;
-  /* flex-direction: column;  */
 }
 
 .todoLink {
@@ -55,21 +61,26 @@
 
 
 .backLink {
+  display: flex;
   font-family: 'Chewy';
   color: lightblue;
   font-size: 30px;
+  /* justify-content: center; */
+  width: 100px;
+  align-items: center;
 }
 
 .backLink:hover {
   color: aquamarine;
+
 }
 
 .todoH1 {
+  text-align: center;
   font-family: 'Chewy';
   font-size: 50px;
   color: lightgreen;
 }
-
 
 .form {
   margin: 30px;
@@ -87,10 +98,49 @@
 }
 
 .ul {
-  list-style: none;
-  align-self: center;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
 }
 
 .li{
+  display: flex;
   font-family: 'Roboto';
+  list-style: none;
+  background-color: lightblue;
+  padding-left: 5px;
+  border-radius: 18px;
+  width: 200px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+}
+
+.toDoDiv {
+  text-align: center;
+}
+
+.todolist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  background-color: tomato;
+  border: none;
+  /* margin-bottom: 10px; */
+  font-family: 'Roboto';
+  border-radius: 18px;
+}
+
+.button:hover {
+  background-color: red;
+}
+
+.todo {
+  display: flex;
+  
 }
