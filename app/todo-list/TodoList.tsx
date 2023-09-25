@@ -12,7 +12,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, onDelete }) => {
     <ul className={styles.ul}>
       {todos.map((todo, index) => (
         <div className={styles.todo} key={todo}>
-        <Todo  text={todo} onDelete={() => onDelete(index)} />
+          <Todo text={todo} onDelete={() => onDelete(index)} />
         </div>
       ))}
     </ul>

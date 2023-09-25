@@ -10,11 +10,11 @@ interface TodoProps {
 const Todo: React.FC<TodoProps> = ({ text, onDelete }) => {
   return (
 
-      <li className={styles.li}>
-        <p>{text}</p>
-        <Button onClick={onDelete}/>
-      </li>
-    
+    <li className={styles.li}>
+      <p>{text}</p>
+      <Button onClick={onDelete} />
+    </li>
+
 
   );
 };

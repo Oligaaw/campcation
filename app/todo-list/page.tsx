@@ -23,8 +23,8 @@ const Home: React.FC = () => {
       <h1 className={styles.todoH1}>Todo list</h1>
       <AddTodo onAdd={addTodo} />
       <div className={styles.todolist}>
-      <p className={styles.p}>Saker att göra:</p>
-      <TodoList todos={todos} onDelete={deleteTodo} />
+        <p className={styles.p}>Saker att göra:</p>
+        <TodoList todos={todos} onDelete={deleteTodo} />
       </div>
       <div className={styles.div}>
         <Link className={styles.backLink} href="/">Tillbaka</Link>

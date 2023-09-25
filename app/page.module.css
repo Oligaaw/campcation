@@ -41,7 +41,7 @@
   margin: 30px;
 }
 
-.inputBtn, 
+.inputBtn,
 .inputField {
   border-radius: 18px;
   padding: 8px;
@@ -65,7 +65,6 @@
   font-family: 'Chewy';
   color: lightblue;
   font-size: 30px;
-  /* justify-content: center; */
   width: 100px;
   align-items: center;
 }
@@ -103,7 +102,7 @@
   align-items: flex-start;
 }
 
-.li{
+.li {
   display: flex;
   font-family: 'Roboto';
   list-style: none;
@@ -142,5 +141,5 @@
 
 .todo {
   display: flex;
-  
+
 }
